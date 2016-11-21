@@ -1,0 +1,8 @@
+[package]
+name = "tldextract"
+version = "0.1.0"
+authors = ["Mohammed Makhlouf <msmakhlouf@gmail.com>", "Mohamad Samir <msamirdev92@gmail.com>"]
+[dependencies]
+hyper = "0.7.2"
+regex = "0.1"
+idna = "0.1.0"
