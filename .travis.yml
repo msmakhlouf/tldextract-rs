@@ -1,0 +1,19 @@
+language: rust
+rust:
+  - nightly
+  - stable
+  - beta
+  - 1.9.0
+
+os:
+  - linux
+  - osx
+  - windows
+
+matrix:
+    allow_failures:
+        - rust: nightly
+
+script:
+  - cargo test
+  - cargo doc --no-deps
