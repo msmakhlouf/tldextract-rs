@@ -18,7 +18,7 @@ tldextract is available on crates.io. To use tldextract in your Rust program bui
 
 ##Usage
 Below is the simplest way to use tldextract:
-
+```rust
     extern crate tldextract;
     use tldextract::tldextract::extract::TldExtract;
     
@@ -33,3 +33,4 @@ Below is the simplest way to use tldextract:
                  domain,
                  suffix);
     }
+```
