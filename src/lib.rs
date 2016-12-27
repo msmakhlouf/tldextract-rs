@@ -1,8 +1,31 @@
 extern crate hyper;
 extern crate regex;
 extern crate idna;
+#[macro_use]
+extern crate log;
+extern crate fern;
+
+
 pub mod tldextract;
 use tldextract::extract::TldExtract;
+
+
+fn setupLogging() {
+    let logger_config = fern::DispatchConfig {
+        format: Box::new(|msg: &str, level: &log::LogLevel, _location: &log::LogLocation| {
+            // This is a fairly simple format, though it's possible to do more complicated ones.
+            // This closure can contain any code, as long as it produces a String message.
+            format!("[{}][{}] {}",
+                    time::now().strftime("%Y-%m-%d][%H:%M:%S").unwrap(),
+                    level,
+                    msg)
+        }),
+        output: vec![fern::OutputConfig::stdout(), fern::OutputConfig::file("output.log")],
+        level: log::LogLevelFilter::Trace,
+    };
+}
+
+
 
 #[test]
 fn multi_level_sub_domain_two_part_suffix() {

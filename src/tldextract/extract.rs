@@ -1,13 +1,12 @@
 use std::fs::File;
-// use std::path::Path;
 use std::path::PathBuf;
 use std::env;
 use std::fs;
-// extern crate idna;
 use idna::domain_to_ascii;
 use std::ascii::AsciiExt;
 extern crate regex;
 use regex::Regex;
+extern crate fern;
 
 use hyper::Client;
 use std::io::prelude::*;
