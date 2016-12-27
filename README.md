@@ -3,7 +3,7 @@
 
 A rustacean implementation of tldextract highly inspired by python's module [tldextract](https://github.com/john-kurkowski/tldextract) by [John Kurkowski](https://github.com/john-kurkowski).
 A tool to accurately separate the TLD from the registered domain and subdomains of a URL, using the Public Suffix List.
-This relys on the [Public Suffix List](http://www.publicsuffix.org/) to identify gTLDs and ccTLDs correctly as oppose to spliting the URL string by dots and guessing where are the parts of interest to you.
+This relys on the [Public Suffix List](http://www.publicsuffix.org/) to identify gTLDs and ccTLDs correctly as oppose to spliting the URL string by dots and guessing where the parts of interest to you are.
 
 ##Requirements
 Rust 1.13.0 or later is required.
