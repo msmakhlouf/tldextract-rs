@@ -12,9 +12,10 @@ On OS X and Windows, you may need to install the openssl runtime and headers to 
 
 ##Installation
 tldextract is available on crates.io. To use tldextract in your Rust program built with Cargo, add it as a dependency as follows:
-
+```toml
     [dependencies]
     tldextract = {"*"}
+```
 
 ##Usage
 Below is the simplest way to use tldextract:
