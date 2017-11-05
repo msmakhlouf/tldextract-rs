@@ -5,19 +5,22 @@ A rustacean implementation of tldextract highly inspired by python's module [tld
 A tool to accurately separate the TLD from the registered domain and subdomains of a URL, using the Public Suffix List.
 This relys on the [Public Suffix List](http://www.publicsuffix.org/) to identify gTLDs and ccTLDs correctly as oppose to spliting the URL string by dots and guessing where the parts of interest to you are.
 
-##Requirements
+## Requirements
+
 Rust 1.13.0 or later is required.
 
 On OS X and Windows, you may need to install the openssl runtime and headers to get the rust-openssl dependency to build. Instructions for that can be found [here](https://github.com/sfackler/rust-openssl#building).
 
-##Installation
+## Installation
+
 tldextract is available on crates.io. To use tldextract in your Rust program built with Cargo, add it as a dependency as follows:
 ```toml
     [dependencies]
     tldextract = {"*"}
 ```
 
-##Usage
+## Usage
+
 Below is the simplest way to use tldextract:
 ```rust
     extern crate tldextract;
